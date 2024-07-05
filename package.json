@@ -1,0 +1,25 @@
+{
+    "name": "thorn-helper-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx tsx ./src/index.ts",
+        "typechain": "typechain --target=ethers-v5 src/**/*.json --out-dir typechain-types"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.15.0",
+        "@typescript-eslint/parser": "^7.15.0",
+        "eslint-config-airbnb-typescript": "^18.0.0",
+        "tsx": "^4.16.2"
+    },
+    "dependencies": {
+        "@typechain/ethers-v5": "^11.1.2",
+        "discord.js": "^14.15.3",
+        "dotenv": "^16.4.5",
+        "ethers": "^5.7.2"
+    }
+}
