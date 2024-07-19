@@ -13,8 +13,10 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Build the TypeScript code
-RUN npx tsx src/index.ts
+RUN npm typechain 
+
+# # Build the TypeScript code
+# RUN npx tsx src/index.ts
 
 # Expose the port that your app runs on
 EXPOSE 3000
