@@ -1,25 +1,12 @@
-# Use an official Node.js runtime as a parent image
+# Dockerfile-data-service
+
 FROM node:18
 
-# Set the working directory
-WORKDIR /app
+WORKDIR /thorn-helper
 
-# Copy the package.json and package-lock.json files
-COPY package*.json ./
-
-# Install dependencies
+COPY ./package*.json ./
 RUN npm install
 
-# Copy the rest of the application code
 COPY . .
 
-RUN npm typechain 
-
-# # Build the TypeScript code
-# RUN npx tsx src/index.ts
-
-# Expose the port that your app runs on
-EXPOSE 3000
-
-# Command to run the application
-CMD ["npx", "tsx", "./src/index.ts"]
+CMD npm run typechain && npm run start 
